@@ -1,0 +1,36 @@
+@import '~normalize.css'
+@import "./colors"
+@import "./fonts"
+
+.container
+  width: 1440px
+  margin: 0 auto
+  @media screen and (max-width: 1440px)
+    width: 100%
+
+header
+  height: 100vh
+  border: 3px solid red
+  .container
+    position: relative
+    background-color: $yellow
+    height: 100%
+    overflow: hidden
+    .header-logo
+      width: 207px
+      height: 207px
+      background-color: white
+      border-radius: 50%
+      position: absolute
+      left: -45px
+      top: -90px
+      &:after
+        content: url("../assets/images/logo-black.svg")
+        position: absolute
+        right: 50px
+        bottom: 40px
+
+
+
+
+
