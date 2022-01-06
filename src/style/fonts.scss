@@ -1,11 +1,13 @@
-@font-face
-  font-family: "SofiaProRegular"
+@font-face{
+  font-family: "SofiaProRegular";
   src : url("../assets/fonts/400/SofiaProRegular.ttf") format('ttf'),
   url("../assets/fonts/400/SofiaProRegular.woff") format('woff'),
-  url("../assets/fonts/400/SofiaProRegular.woff2") format('woff2')
+  url("../assets/fonts/400/SofiaProRegular.woff2") format('woff2');
+}
 
-@font-face
-  font-family: "SofiaProBold"
+@font-face{
+  font-family: "SofiaProBold";
   src : url("../assets/fonts/700/SofiaProBold.ttf") format('ttf'),
   url("../assets/fonts/700/SofiaProBold.woff") format('woff'),
-  url("../assets/fonts/700/SofiaProBold.woff2") format('woff2')
+  url("../assets/fonts/700/SofiaProBold.woff2") format('woff2');
+}
