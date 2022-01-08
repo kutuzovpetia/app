@@ -1,13 +1,32 @@
-@import '~normalize.css';
+@import "~normalize.css";
 @import "./colors";
 @import "./fonts";
+@import "./header";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .container{
   width: 1440px;
   margin: 0 auto;
+  font-family: SofiaProRegular, SansSerif;
   @media screen and (max-width: 1440px){
     width: 100%;
   }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
 }
 
 ul{
@@ -16,88 +35,26 @@ ul{
   margin: 0;
 }
 
-header{
-  height: 100vh;
-
+#cards{
   .container{
     position: relative;
-    background-color: $yellow;
-    height: 100%;
+    border: 2px solid red;
+    height: 100vh;
     overflow: hidden;
-    .header-logo{
-      width: 207px;
-      height: 207px;
-      background-color: white;
-      border-radius: 50%;
+    .cards-decoration{
+      background-image: url("../assets/images/phone.png");
+      width: 300px;
+      height: 560px;
       position: absolute;
-      left: -45px;
-      top: -90px;
-      &:after{
-        content: url("../assets/images/logo-black.svg");
-        position: absolute;
-        right: 50px;
-        bottom: 40px;
-      }
-    }
-  }
-
-  .header-navigation{
-    display: flex;
-    justify-content: space-around;
-    .header-navigation__nav{
-      .header-navigation__list{
-        display: flex;
-        background-color: white;
-        border-radius: 50px;
-        min-width: 193px;
-        height: 40px;
-        padding: 0;
-        .header-navigation__item{
-          display: flex;
-          align-items: center;
-          padding: 13px 30px;
-          border-radius: 50px;
-          transition: all .3s;
-          cursor: pointer;
-          color: #1B4659;
-          font-family: "SofiaProRegular";
-          font-size: 14px;
-          font-weight: 400;
-          &:hover{
-            background-color: #295058;
-            color: white;
-          }
-        }
+      top: -413px;
+      right: 371px;
+      transition: all .3s ease;
+      @media screen and (max-width: 1260px){
+        left: 765px;
       }
     }
 
-    .header-navigation__language{
-      overflow: hidden;
-      height: 40px;
-      border-radius: 50px;
-      transition: height .5s ease;
-      &:hover{
-        .header-navigation__list{
-          height: auto;
-        }
-      }
-      .header-navigation__list{
-        height: auto;
-        .header-navigation__item{
-          min-width: 140px;
-          height: 40px;
-          background-color: #0A2328;
-          color: white;
-          font-family: "SofiaProRegular";
-          font-size: 14px;
-          font-weight: 400;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-      }
-    }
+
   }
 }
 

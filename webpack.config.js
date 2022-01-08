@@ -26,6 +26,7 @@ const optimization = () =>{
 
 const filename = ext => isDev ? `[name].${ext}`:`[name].[hash].${ext}`
 
+console.log(path.resolve(__dirname, 'src'))
 
 //Конфигурация webpack
 module.exports = {
@@ -46,7 +47,7 @@ module.exports = {
         port: 4200,
         overlay: true,
         stats: 'errors-only',
-        // hot: isDev
+        host: '0.0.0.0',
     },
     plugins:[
         // html
@@ -59,11 +60,11 @@ module.exports = {
         // clear dist
         new CleanWebpackPlugin(),
         // Copy files
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         { from: path.resolve(__dirname, 'src/icon.png'), to: path.resolve(__dirname, 'dist')}
-        //     ]
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, 'src/assets/images/cards-img'), to: path.resolve(__dirname, 'dist/images')}
+            ]
+        }),
         new MiniCssExtractPlugin({
             filename: filename('css')
         })
@@ -96,11 +97,17 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'images',
+                },
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'fonts',
+                },
             },
             {
                 test: /\.m?js$/,
