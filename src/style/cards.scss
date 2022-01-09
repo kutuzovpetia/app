@@ -1,0 +1,117 @@
+#cards{
+  .container{
+    position: relative;
+    //border: 2px solid red;
+    height: 100vh;
+    overflow: hidden;
+    .cards-decoration{
+      background-image: url("../assets/images/phone.png");
+      width: 300px;
+      height: 560px;
+      position: absolute;
+      top: -413px;
+      right: 371px;
+      transition: all .3s ease;
+      @media screen and (max-width: 1260px){
+        left: 765px;
+      }
+    }
+
+    .cards-content{
+
+      .cards-content__title{
+        margin-top: 260px;
+        text-align: center;
+        @media screen and (max-width: 764px){
+          margin-top: 60px;
+        }
+        h1{
+          color: #0A2328;
+          font-family: SofiaProRegular, SansSerif;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 30px;
+        }
+        .cards-title{
+          color: #0A2328;
+          font-family: SofiaProRegular, SansSerif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 46px;
+          @media screen and (max-width: 764px){
+            margin-top: 15px;
+            line-height: 27px;
+          }
+        }
+      }
+
+      .cards-content__scrolling{
+        margin: 60px auto 0 auto;
+        width: 1120px;
+        //border: 2px solid blue;
+        display: flex;
+        transition: all .3s ease;
+        overflow-y: scroll;
+        @media screen and (max-width: 1120px) {
+          width: 100%;
+        }
+        @media screen and (max-width: 764px) {
+          padding: 0 36px;
+        }
+
+        .cards-content__card{
+          //border: 1px solid red;
+          margin: 0 24px;
+          position: relative;
+          .card-count{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #295058;
+            color: #FFFEF8;
+            font-family: SofiaProRegular, SansSerif;
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 30px;
+            top: 10px;
+          }
+          .card-content__image{
+            width: 230px;
+            height: 230px;
+            //border: 1px solid green;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+              width: 100%;
+            }
+          }
+          .card-content__body{
+            margin-top: 50px;
+            h1{
+              font-family: SofiaProRegular, SansSerif;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 28px;
+              color: #0A2328;
+            }
+            p{
+              font-family: SofiaProRegular, SansSerif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 25px;
+              color: #0A2328;
+            }
+          }
+
+        }
+
+
+      }
+
+    }
+
+  }
+}

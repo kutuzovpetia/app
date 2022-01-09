@@ -2,6 +2,7 @@
 @import "./colors";
 @import "./fonts";
 @import "./header";
+@import "./cards";
 
 html {
   scroll-behavior: smooth;
@@ -35,27 +36,15 @@ ul{
   margin: 0;
 }
 
-#cards{
+#live-events{
+
   .container{
-    position: relative;
-    border: 2px solid red;
-    height: 100vh;
-    overflow: hidden;
-    .cards-decoration{
-      background-image: url("../assets/images/phone.png");
-      width: 300px;
-      height: 560px;
-      position: absolute;
-      top: -413px;
-      right: 371px;
-      transition: all .3s ease;
-      @media screen and (max-width: 1260px){
-        left: 765px;
+      #map{
+        width: 1020px;
+        height: 720px;
       }
-    }
-
-
   }
+
 }
 
 

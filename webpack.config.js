@@ -33,7 +33,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill','./index.js'],
+        main: ['@babel/polyfill','./js/index.js'],
     },
     output: {
         filename: filename('js'),
@@ -62,7 +62,8 @@ module.exports = {
         // Copy files
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/assets/images/cards-img'), to: path.resolve(__dirname, 'dist/images')}
+                { from: path.resolve(__dirname, 'src/assets/images/cards-img'), to: path.resolve(__dirname, 'dist/images')},
+                { from: path.resolve(__dirname, 'src/assets/images/markers'), to: path.resolve(__dirname, 'dist/images')},
             ]
         }),
         new MiniCssExtractPlugin({
