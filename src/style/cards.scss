@@ -10,10 +10,10 @@
       height: 560px;
       position: absolute;
       top: -413px;
-      right: 371px;
+      right: 373px;
       transition: all .3s ease;
       @media screen and (max-width: 1260px){
-        left: 765px;
+        left: 767px;
       }
     }
 
@@ -52,6 +52,11 @@
         display: flex;
         transition: all .3s ease;
         overflow-y: scroll;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {display: none;}
+        /* Hide scrollbar for IE, Edge and Firefox */
+        & {-ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */}
         @media screen and (max-width: 1120px) {
           width: 100%;
         }
