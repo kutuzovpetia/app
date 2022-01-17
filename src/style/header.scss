@@ -239,7 +239,7 @@ header{
 
     .header-navigation{
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       position: absolute;
       top: 0;
       left: 340px;
@@ -254,6 +254,7 @@ header{
       }
 
       .header-navigation__nav{
+        margin: 0 15px 0 0;
         .header-navigation__list{
           display: flex;
           background-color: white;
@@ -264,7 +265,8 @@ header{
           .header-navigation__item{
             display: flex;
             align-items: center;
-            padding: 13px 30px;
+            justify-content: center;
+            padding: 13px 15px;
             border-radius: 50px;
             transition: all .3s;
             cursor: pointer;
@@ -272,10 +274,20 @@ header{
             font-family: "SofiaProRegular";
             font-size: 14px;
             font-weight: 400;
-            min-width: 120px;
-            &:hover{
-              background-color: #295058;
-              color: white;
+            min-width: 110px;
+            position: relative;
+            letter-spacing: -2%;
+            &:hover .header-navigation__link{
+              padding: 18px 25px;
+              background-color: $blackLight;
+              border-radius: 50px;
+              color: $whiteMilk;
+            }
+            .header-navigation__link{
+              position: absolute;
+              color: $blueLight;
+              transition: all .3s ease;
+              white-space: nowrap;
             }
           }
         }
@@ -283,12 +295,13 @@ header{
 
       .header-navigation__language{
         .select-css {
+          border: 0;
           height: 40px;
           display: block;
           font-size: 14px;
           font-family: SofiaProRegular, sans-serif;
           font-weight: 400;
-          color: white;
+          color: $blackLight;
           padding: 12px 20px;
           min-width: 120px;
           margin: 0;
@@ -296,13 +309,14 @@ header{
           -moz-appearance: none;
           -webkit-appearance: none;
           appearance: none;
-          background-color: #0A2328;
+          background-color: $yellow;
           background-repeat: no-repeat, repeat;
-          background-position: right .7em top 50%, 0 0;
-          background-image: url("../assets/images/arrow-white-down.svg");
+          background-position: right 1.7em top 50%, 0 0;
+          background-image: url("../assets/images/arrow-down-black.svg");
           &:focus{
             box-shadow: none!important;
             outline: none;
+            color: $blackLight!important;
           }
         }
         .select-css::-ms-expand { display: none; }
