@@ -5,15 +5,22 @@
     height: 100vh;
     overflow: hidden;
     .cards-decoration{
-      background-image: url("../assets/images/phone.png");
-      width: 300px;
-      height: 560px;
+      background-image: url("../assets/images/phone-down.png");
+      //width: 300px;
+      //height: 560px;
+      //position: absolute;
+      //top: -413px;
+      //right: 373px;
       position: absolute;
-      top: -413px;
-      right: 373px;
+      width: 297px;
+      height: 128px;
+      background-repeat: no-repeat;
+      top: 0;
+      right: 375px;
+
       transition: all .3s ease;
       @media screen and (max-width: 1260px){
-        left: 767px;
+        left: 768px;
       }
     }
 
